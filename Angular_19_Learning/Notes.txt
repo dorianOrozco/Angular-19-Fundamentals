@@ -1,0 +1,27 @@
+Starting the project can be done through the cli via command : ng s
+
+<-- Standalone Components -->
+In versions prior to Angular 14, creating a component would require it be declared in NgModule within the app.module.ts
+
+Angular 14 and later, standalone components can be created and used independently. This means they do not need to be declared within.
+
+Now, components can be created through the cli using  ng g c user (ng generate component (name)), these are known as standalone components. Again, these do not need to be declared.
+
+For older projects you can convert components into standalone by adding the property standalone : true, then it must be removed from the ng declaration.
+
+Angular version 19, standalone components are the default, thus no standalone property exists.
+
+<!-- Component -->
+
+@Component({
+  selector: 'app-user',                   : Selector uses angular.json prefix to append before the component name (can be customized)
+  imports: [],                            : Lists all required models and dependencies ex. CommonModule, FormsModule.. etc
+  templateUrl: './user.component.html',   : Points to the HTML file for the component which defines the user interface view
+  styleUrl: './user.component.scss'       : Points to the scss / css file for the component 
+})
+
+Whenever you want to import a component to a place such as the app component, you must type the component within the imports of the component.
+
+For example, in app.component.ts 
+
+
