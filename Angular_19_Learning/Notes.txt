@@ -14,7 +14,8 @@ Angular version 19, standalone components are the default, thus no standalone pr
 <!-- Component -->
 
 @Component({
-  selector: 'app-user',                   : Selector uses angular.json prefix to append before the component name (can be customized)
+  selector: 'app-user',                   : Selector uses angular.json prefix to append before the component name (can be customized) 
+                                          : You can use this component by doing <app-user></app-user>... This can be named anything.
   imports: [],                            : Lists all required models and dependencies ex. CommonModule, FormsModule.. etc
   templateUrl: './user.component.html',   : Points to the HTML file for the component which defines the user interface view
   styleUrl: './user.component.scss'       : Points to the scss / css file for the component 
@@ -22,6 +23,18 @@ Angular version 19, standalone components are the default, thus no standalone pr
 
 Whenever you want to import a component to a place such as the app component, you must type the component within the imports of the component.
 
-For example, in app.component.ts 
+For example, in app.component.ts we can import a user component. Since the app component is the default, within the HTML it is found within the <app-root></app-root> tag. Since this component (in the app.component.ts) contains the user component, it will also display.
 
 
+? Normal components are dependant and unless added to a model, cannot be used in any part of the application ?
+
+
+<!-- Data Bindings -->
+One Way Data Binding:  Data moves from the component to the HTML elements (like controller to view)
+  - Interpolation: {{ value }}
+  - Property Binding:
+  - Event Binding:
+
+
+Two Way Data Binding:
+  - [(ngModel)]
